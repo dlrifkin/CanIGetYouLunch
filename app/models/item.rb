@@ -3,8 +3,6 @@ class Item < ActiveRecord::Base
   has_many :orders
   has_many :pickups
 
-  validates :name, presence: true
-  validates :category, presence: true
-  validates :restaurant_id, presence: true
+  validates :name, :category, :restaurant_id, presence: true
 
 end
