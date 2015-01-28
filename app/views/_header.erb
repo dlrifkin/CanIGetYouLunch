@@ -3,16 +3,9 @@
 
   <% if current_user %>
     <h3>Hi there, <%= current_user.name %>!!! </h3>
-    <div class='user-tools'>
-      <a id="my-active-orders" href="/order/<%= current_user.id%>"> My Active Orders</a> |
-      <a id="my-active-pickups" href="/pickup/<%= current_user.id%>">Answered Surveys </a> |
-      <a id="order-history" href="/order/all/<%= current_user.id%>"> My Order History</a> |
-      <a id="pickup-history" href="/pickup/all/<%= current_user.id%>"> My Pickup History </a> |
-      <a href="/logout" id="logout">Logout</a>
-    </div>
+    <a href="/logout" id="logout">Logout</a>
   <% else %>
-    <div class='user-tools'>
-      <a href="/login">Log in</a>
-      or <a href="/signup">Sign up</a> if you want to eat!
-    </div>
-<% end %>
+    <a href="/login">Log in</a>
+    or <a href="/signup">Sign up</a> if you want to eat!
+  <% end %>
+</div>
