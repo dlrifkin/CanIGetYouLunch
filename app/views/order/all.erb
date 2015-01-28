@@ -1,0 +1,7 @@
+<h2>Here are the orders you asked for:</h2>
+
+<% @orders.each do |order| %>
+
+<%= erb :'/order/show', locals: {order: order} %>
+
+<% end %>
