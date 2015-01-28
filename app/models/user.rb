@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password
-  has_many :orders
-  has_many :pickups
+  has_many :orders, foreign_key: :requestor_id
+  has_many :pickups, foreign_key: :retriever_id
 
   validates :user_name, :email, :presence => true
 
