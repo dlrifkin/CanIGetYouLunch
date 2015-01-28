@@ -1,9 +1,10 @@
 <table>
-    <tr>
-      <td><a id="my-active-orders" href="/order/<%= current_user.id%>"> My Active Orders</a></td>
-    <td><a id="my-active-pickups" href="/pickup/<%= current_user.id%>"> My Active Pickups </a></td>
-    <td><a id="available-pickups" href="/pickup/all"> Orders Available for Pickup </a></td>
-    <td><a id="order-history" href="/order/all/<%= current_user.id%>"> My Order History</a></td>
-    <td><a id="pickup-history" href="/pickup/all/<%= current_user.id%>"> My Pickup History </a></td>
-  </tr>
+  <tr>
+    <td><a id="request-pickup" href="/order/new"> Create Order </a></td>
+    <td><a id="available-pickups" href="/pickup/all"> Orders Available for Pickup </a></td></tr>
+
+  <tr>
+    <td><a id="my-active-orders" href="/order/all/<%= current_user.id%>"> My Orders</a></td>
+    <td><a id="my-active-pickups" href="/pickup/all/<%= current_user.id%>"> My Pickups </a></td></tr>
+
 </table>
