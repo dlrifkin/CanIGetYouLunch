@@ -1,1 +1,11 @@
-Welcome to my site!
+<div id="main-container">
+
+  <%= erb :'/_errors' %>
+
+  <% if current_user %>
+
+    <%= erb :'/_userbar' %>
+
+  <% end %>
+
+</div>
