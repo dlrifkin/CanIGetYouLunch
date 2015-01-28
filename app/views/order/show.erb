@@ -1,0 +1,12 @@
+
+  <p>This order, requested at <%= order.created_at.to_formatted_s%>, is for <%= order.item.name%> from <%= order.restaurant.name%></p>
+  <% unless current_user.id == order.requestor_id %>
+   <form action="/order/<%= order.id %>" method="POST" class="comment_delete">
+      <input type="submit" value="Pick Up">
+  </form>
+  <% else %> <div class="your-order-alert">(Hey, this is your order! You can get rid of it if you want.)</div></p>
+    <form action="/order/<%= order.id %>" method="POST" class="order_delete">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Delete!">
+  </form>
+  <% end %>
