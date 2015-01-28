@@ -1,0 +1,9 @@
+<div id="error-bar">
+  <% if session[:errors] %>
+    <h3>Wait a second...</h3>
+
+    <% display_errors!.each do |error| %>
+      <% error.key.capitalize%> <%error.value%>
+    <%end%>
+  <%end%>
+</div>
