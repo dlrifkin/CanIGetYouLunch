@@ -13,8 +13,8 @@ get '/order/all/:id' do |id|
 end
 
 post '/order/new' do
-  restaurant = Restaurant.first_or_create(params[:restaurant])
-  item = Item.first_or_create(params[:item])
+  restaurant = Restaurant.first_or_create(name: params[:restaurant][:name])
+  item = Item.first_or_create(name: params[:item][:name], restaurant_id: restaurant.id)
   order = Order.new(requestor_id: current_user.id, item_id: item.id)
 
   if order.save
