@@ -14,6 +14,13 @@ class Pickup < ActiveRecord::Base
     self.order.requestor
   end
 
+  def self.active
+    Pickup.where(fulfilled: false)
+  end
+
+  def self.completed
+    Pickup.where(fulfilled: true)
+  end
 
   validates :retriever_id, :order_id, :presence => true
 
