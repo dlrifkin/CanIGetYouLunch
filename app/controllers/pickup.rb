@@ -1,4 +1,4 @@
-get 'pickup/:id' do |id|
+get '/pickup/:id' do |id|
   @pickups = Pickup.where(retriever_id: id)
   erb :'/pickup/all'
 end

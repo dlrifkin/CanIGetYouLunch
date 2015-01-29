@@ -1,7 +1,10 @@
-<h2>Here are the orders you are looking for:</h2>
+<div id="all-pickups">
+  <h2>Here are the orders you are looking for:</h2>
 
-<% @pickups.each do |pickup| %>
+  <% @pickups.each do |pickup| %>
 
-<%= erb :'/pickup/show', locals: {pickup: pickup} %>
+  <%= erb :'/pickup/show', locals: {pickup: pickup} %>
 
-<% end %>
+  <% end %>
+
+</div>
