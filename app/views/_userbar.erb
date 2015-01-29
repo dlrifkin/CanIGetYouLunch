@@ -1,13 +1,12 @@
 <div id= "user-bar">
   <table>
-    <tr>
+    <tr class="user-row">
       <td><a id="request-pickup" href="/order/new"> Create Order </a></td></tr>
-    <tr>
+    <tr class="user-row">
       <td><a id="available-pickups" href="/order/search"> Orders Available for Pickup </a></td></tr>
-
-    <tr>
+    <tr class="user-row">
       <td><a id="my-active-orders" href="/order/all/<%= current_user.id%>"> My Active Orders</a></td></tr>
-    <tr>
+    <tr class="user-row">
       <td><a id="my-active-pickups" href="/pickup/<%= current_user.id%>"> My Active Pickups </a></td></tr>
 
   </table>

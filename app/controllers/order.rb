@@ -1,5 +1,10 @@
 get '/order/new' do
-  erb :'/order/new'
+
+  if request.xhr?
+    erb :'/order/new', layout: false
+  else
+    erb :'/order/new'
+  end
 end
 
 get '/order/search' do
