@@ -14,7 +14,7 @@ $user_bar.on('click', '#request-pickup', function(event)  {
     })
   })
 
-$user_bar.on('click', '#available-pickups', function(event)  {
+  $user_bar.on('click', '#available-pickups', function(event)  {
     event.preventDefault();
     var $target = $(event.target);
 
@@ -26,7 +26,7 @@ $user_bar.on('click', '#available-pickups', function(event)  {
     })
   })
 
-$user_bar.on('click', '#my-active-orders', function(event)  {
+  $user_bar.on('click', '#my-active-orders', function(event)  {
     event.preventDefault();
     var $target = $(event.target);
 
@@ -38,7 +38,7 @@ $user_bar.on('click', '#my-active-orders', function(event)  {
     })
   })
 
-$user_bar.on('click', '#my-active-pickups', function(event)  {
+  $user_bar.on('click', '#my-active-pickups', function(event)  {
     event.preventDefault();
     var $target = $(event.target);
     $target.toggle()
@@ -48,6 +48,20 @@ $user_bar.on('click', '#my-active-pickups', function(event)  {
       type: 'GET'
     }).done(function(response) {
       $target.closest('.user-row').append('<td>' + response + '</td>')
+    })
+  })
+
+// Computer and shotgun crashed... unsure if this submits
+
+  $user_bar.on('click', '#new-order-form', function(event)  {
+    event.preventDefault();
+    var $target = $(event.target);
+    $target.toggle()
+
+    $.ajax({
+      url: $target.attr('action'),
+      type: 'POST'
+      data: $target.serialize()
     })
   })
 
