@@ -1,5 +1,5 @@
 <div class="show-pickup">
-  <p>You still have to pick up this order, requested by <%= pickup.order.requestor.user_name %> at <%= pickup.order.created_at%>, is for <%= pickup.order.item.name%> from <%= pickup.order.restaurant.name%></p>
+  <p> <%= pickup.order.item.name%> from <%= pickup.order.restaurant.name%> for <%= pickup.order.requestor.user_name %> (requested at <%= pickup.order.created_at%>) </p>
   <form action="/pickup/<%= pickup.id %>" method="POST" class="pickup_complete">
     <input type="hidden" name="_method" value="PUT">
     <input type="submit" value="Picked Up">
