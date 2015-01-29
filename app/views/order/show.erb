@@ -1,4 +1,4 @@
-
+<div class="show-order">
   <p>This order, requested by <%= order.requestor.user_name %> at <%= order.created_at%>, is for <%= order.item.name%> from <%= order.restaurant.name%></p>
   <% unless current_user.id == order.requestor_id %>
    <form action="/pickup" method="POST">
@@ -11,3 +11,4 @@
       <input type="submit" value="Delete!">
   </form>
   <% end %>
+</div>

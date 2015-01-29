@@ -1,7 +1,9 @@
-<h2>Here are the orders you are looking for:</h2>
+<div id="all-orders">
+  <h2>Check out THESE orders:</h2>
 
-<% @orders.each do |order| %>
+  <% @orders.each do |order| %>
 
-<%= erb :'/order/show', locals: {order: order} %>
+  <%= erb :'/order/show', locals: {order: order} %>
 
-<% end %>
+  <% end %>
+</div>
