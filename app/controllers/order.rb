@@ -9,12 +9,20 @@ end
 
 get '/order/search' do
   @orders = Order.unclaimed
-  erb :'/order/all'
+  if request.xhr?
+    erb :'/order/all', layout: false
+  else
+    erb :'/order/all'
+  end
 end
 
 get '/order/all/:id' do |id|
   @orders = Order.where(requestor_id: id)
-  erb :'/order/all'
+  if request.xhr?
+    erb :'/order/all', layout: false
+  else
+    erb :'/order/all'
+  end
 end
 
 post '/order/new' do

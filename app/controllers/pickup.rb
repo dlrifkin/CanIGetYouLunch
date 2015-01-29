@@ -1,6 +1,10 @@
 get '/pickup/:id' do |id|
   @pickups = Pickup.active.where(retriever_id: id)
-  erb :'/pickup/all'
+  if request.xhr?
+    erb :'/pickup/all', layout: false
+  else
+    erb :'/pickup/all'
+  end
 end
 
 put '/pickup/:id' do |id|
