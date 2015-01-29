@@ -21,10 +21,8 @@ rake generate:model      # Create an empty model in app/models, e.g., rake gener
 
 ### Contributing
 
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
-
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
-
-Be prepared to give and receive specific, actionable, and kind feedback!
+Intended future additions:
+-Check order and pickup history
+-Add charge feature for pickup
+-Venmo API for sign-in and charging
+-Error handling for login/ordering
